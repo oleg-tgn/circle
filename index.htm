@@ -9,7 +9,10 @@
 	<title>SENSITIVE SKIN</title>
 	<link href="http://www.larocheposay.de/includeV4/css/AOX.min.css?versionAOX=220184162152_20180417_01" rel="stylesheet" type="text/css"/>
 	<!-- !!!! -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 	<link media="screen,print" href="http://www.larocheposay.de/resources/DE/sensitive_allergic/css/sensitive_allergic.css?versionAOX=220184162152_20180417_01" rel="stylesheet" type="text/css"/>
+	<script src="js/jQueryRotate.js"></script>
 </head>
 <body id="bodyContainerID" class="pg_article  articletype_fullhtml article_v4_op_sensitive_allergic_landing_20170420 de portalv4 pg_sensitive_allergic pg_landing de portalv4">
 
@@ -88,36 +91,27 @@
 		</div>
 	</section>
 
-<script src="http://www.larocheposay.de/includeV4/js/AOX.min.js?versionAOX=220184162152_20180417_01" type="text/javascript"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script type='text/javascript'>
-    jQueryObject('document').ready(function () {
-		// Carrousels standard
-        jQueryObject('.bloc_irritation .obj_carrousel').carrousel({ adaptiveHeight: true, minWidth: 220 });
-        jQueryObject('.bloc_routine .obj_carrousel').carrousel({ adaptiveHeight: true });
-
-        if (AOXJsManager.isMobile()) {
-            jQueryObject('.bloc_composants .obj_carrousel').carrousel({ adaptiveHeight: true, minWidth: 300 });
-            jQueryObject('.obj_detail_elements .obj_carrousel').carrousel({ adaptiveHeight: true, minWidth: 300 });
-        }
-
-        // Carrousel circulaire
+    $('document').ready(function () {
+		// Carrousel circulaire
         initCircularCarrousel();
     });
 
-	function initCircularCarrousel(options) {
+	function initCircularCarrousel() {
 
-        var settings = jQueryObject.extend({
+        var settings = {
                 // default options
                 container: '.obj_etapes-circular',
                 circular: '.obj_circular',
                 details: '.obj_detail_elements .item',
                 prev: '.b_prev',
                 next: '.b_next',
-                speed: 500
-            }, options),
+                speed: 300
+            },
 
-            $container = jQueryObject(settings.container),
+            $container = $(settings.container),
             $circular = $container.find(settings.circular),
             $anchors = $circular.find('a'),
             $details = $container.find(settings.details),
@@ -127,9 +121,11 @@
             isAnimating = false,
             speed = settings.speed,
             angle = 0,
-            $div = jQueryObject('<div>'),
-            hasTransition = jQueryObject.support.transition,
+            $div = $('<section>'),
+            hasTransition = $.support.transition,
             method = hasTransition ? 'transit' : 'animate';
+
+
 
         function rotate(e) {
             e.preventDefault();
@@ -137,7 +133,7 @@
             if (isAnimating)
                 return;
 
-            var $target = jQueryObject(e.currentTarget),
+            var $target = $(e.currentTarget),
                 $targetDetail = $details.filter($target.attr('href')),
                 $displayed = $anchors.filter('.current'),
                 $displayedDetail = $details.filter('.current'),
@@ -154,26 +150,16 @@
                 angle += 360;
             }
 
-            // set div for ie 9
-            $div.css({ height: angle });
-            angle += targetAngle - displayedAngle;
+			angle += targetAngle - displayedAngle;
 
-            if (hasTransition) {
-                $circular.transit({ rotate: -angle + 'deg' }, speed);
-                $anchors.transit({ rotate: angle + 'deg' }, speed);
-            }
-            else {
-                // ie 9
-                $div
-                    .animate({ height: angle }, {
-                        duration: speed,
-                        step: function (now, fx) {
-                            $circular.css({ '-ms-transform': 'rotate(' + -fx.now + 'deg)' });
-                            $anchors.css({ '-ms-transform': 'rotate(' + fx.now + 'deg)' });
-                        }
-                    })
-            }
-
+			$div.animate({ height: angle }, {
+					duration: speed,
+					step: function (now, fx) {
+					$circular.css({ 'transform': 'rotate(' + -fx.now + 'deg)' });
+					$anchors.css({ 'transform': 'rotate(' + fx.now + 'deg)' });
+				}
+			});
+			
             $displayed.removeClass('current');
             $target.addClass('current');
 
@@ -204,8 +190,8 @@
         }
 
         $prev.on('click', trigger.bind($prev)),
-            $next.on('click', trigger.bind($next)),
-            $anchors.on('click', rotate);
+		$next.on('click', trigger.bind($next)),
+		$anchors.on('click', rotate);
     }
 </script>
 
