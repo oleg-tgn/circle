@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head id="headContainerID">
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv='Content-Script-Type' content='text/javascript' />
+	<meta http-equiv='Content-Style-Type' content='text/css' />
+	<meta http-equiv='content-language' content='de' />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<title>SENSITIVE SKIN</title>
+	<link href="http://www.larocheposay.de/includeV4/css/AOX.min.css?versionAOX=220184162152_20180417_01" rel="stylesheet" type="text/css"/>
+	<!-- !!!! -->
+	<link media="screen,print" href="http://www.larocheposay.de/resources/DE/sensitive_allergic/css/sensitive_allergic.css?versionAOX=220184162152_20180417_01" rel="stylesheet" type="text/css"/>
+</head>
+<body id="bodyContainerID" class="pg_article  articletype_fullhtml article_v4_op_sensitive_allergic_landing_20170420 de portalv4 pg_sensitive_allergic pg_landing de portalv4">
+
+	<section class="obj_bloc bloc_reaction">
+		<div class="ctn_content">
+			<div class="obj_etapes-circular clearfix">
+				<div class="ctn_etapes">
+					<div class="obj_circular">
+						<a class="obj_element element_01 current" href="#Element01">
+							<div class="ctn_element">
+								<figure><img alt="Gestörte Hautbarriereschicht" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_1.png" /></figure>
+							</div>
+						</a>
+						<a class="obj_element element_02" href="#Element02">
+							<div class="ctn_element">
+								<figure><img alt="Allergene dringen leichter ein" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_2.png" /></figure>
+							</div>
+						</a>
+						<a class="obj_element element_03" href="#Element03">
+							<div class="ctn_element">
+								<figure><img alt="Unsichtbare Symptome" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_3.png" /></figure>
+							</div>
+						</a>
+						<a class="obj_element element_04" href="#Element04">
+							<div class="ctn_element">
+								<figure><img alt="Die allergische Reaktion" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_4.png" /></figure>
+							</div>
+						</a>
+					</div>
+					<div class="nav"><button class="b_next" type="button">next</button><button class="b_prev" type="button">previous</button></div>
+				</div>
+				<div class="obj_detail_elements">
+					<div class="ctn_detail_elements">
+						<div class="obj_carrousel">
+							<div class="masque">
+								<div class="items">
+									<div class="item element_01 current" id="Element01">
+										<div class="ctn_detail">
+											<p>Stadium 1</p>
+											<figure><img alt="Gestörte Hautbarriereschicht" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_1.png" /></figure>
+											<h3>Gestörte <strong>Hautbarriereschicht</strong></h3>
+											<p>Besonders bei empfindlicher Haut ist die Barriereschicht die »Schwachstelle«.</p>
+										</div>
+									</div>
+									<div class="item element_02" id="Element02">
+										<div class="ctn_detail">
+											<p>Stadium 2</p>
+											<figure><img alt="Allergene dringen leichter ein" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_2.png" /></figure>
+											<h3><strong>Allergene</strong> dringen leichter ein</h3>
+											<p>Ist sie gestört, können allergieauslösende Substanzen leichter eindringen und die Haut zusätzlich reizen.</p>
+										</div>
+									</div>
+									<div class="item element_03" id="Element03">
+										<div class="ctn_detail">
+											<p>Stadium 3</p>
+											<figure><img alt="Unsichtbare Symptome" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_3.png" /></figure>
+											<h3>Unsichtbare <br /><strong>Symptome</strong></h3>
+											<p>Erhöhtes Ausströmen entzündlicher Stoffe. »Unsichtbare« Symptome machen sich bemerkbar: Die Haut kribbelt, juckt oder brennt.</p>
+										</div>
+									</div>
+									<div class="item element_04" id="Element04">
+										<div class="ctn_detail">
+											<p>Stadium 4</p>
+											<figure><img alt="Unsichtbare Symptome" src="http://www.larocheposay.de/resources/DE/sensitive_allergic/images/v_allergie-stade_4.png" /></figure>
+											<h3>Die allergische <br /><strong>Reaktion</strong></h3>
+											<p>Erst jetzt kommen sichtbare Symptome wie Rötungen oder leichte Schwellungen hinzu, im weiteren Verlauf sogar Ekzeme oder Hautveränderungen. Ganz selbstverständlich reagieren Betroffene mit Kratzen – doch das verschlimmert die Symptome leider noch: <strong>Ein Teufelskreis</strong>.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="nav"><button class="prev">Prev</button><button class="next">Next</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<script src="http://www.larocheposay.de/includeV4/js/AOX.min.js?versionAOX=220184162152_20180417_01" type="text/javascript"></script>
+
+<script type='text/javascript'>
+    jQueryObject('document').ready(function () {
+		// Carrousels standard
+        jQueryObject('.bloc_irritation .obj_carrousel').carrousel({ adaptiveHeight: true, minWidth: 220 });
+        jQueryObject('.bloc_routine .obj_carrousel').carrousel({ adaptiveHeight: true });
+
+        if (AOXJsManager.isMobile()) {
+            jQueryObject('.bloc_composants .obj_carrousel').carrousel({ adaptiveHeight: true, minWidth: 300 });
+            jQueryObject('.obj_detail_elements .obj_carrousel').carrousel({ adaptiveHeight: true, minWidth: 300 });
+        }
+
+        // Carrousel circulaire
+        initCircularCarrousel();
+    });
+
+	function initCircularCarrousel(options) {
+
+        var settings = jQueryObject.extend({
+                // default options
+                container: '.obj_etapes-circular',
+                circular: '.obj_circular',
+                details: '.obj_detail_elements .item',
+                prev: '.b_prev',
+                next: '.b_next',
+                speed: 500
+            }, options),
+
+            $container = jQueryObject(settings.container),
+            $circular = $container.find(settings.circular),
+            $anchors = $circular.find('a'),
+            $details = $container.find(settings.details),
+            $prev = $container.find(settings.prev),
+            $next = $container.find(settings.next),
+            length = $anchors.length,
+            isAnimating = false,
+            speed = settings.speed,
+            angle = 0,
+            $div = jQueryObject('<div>'),
+            hasTransition = jQueryObject.support.transition,
+            method = hasTransition ? 'transit' : 'animate';
+
+        function rotate(e) {
+            e.preventDefault();
+
+            if (isAnimating)
+                return;
+
+            var $target = jQueryObject(e.currentTarget),
+                $targetDetail = $details.filter($target.attr('href')),
+                $displayed = $anchors.filter('.current'),
+                $displayedDetail = $details.filter('.current'),
+                targetAngle = $anchors.index($target) * 360 / length,
+                displayedAngle = angle % 360;
+
+            isAnimating = true;
+
+            if (displayedAngle < 180 && targetAngle > displayedAngle + 180) {
+                angle -= 360;
+            }
+
+            if (displayedAngle >= 180 && targetAngle <= displayedAngle - 180) {
+                angle += 360;
+            }
+
+            // set div for ie 9
+            $div.css({ height: angle });
+            angle += targetAngle - displayedAngle;
+
+            if (hasTransition) {
+                $circular.transit({ rotate: -angle + 'deg' }, speed);
+                $anchors.transit({ rotate: angle + 'deg' }, speed);
+            }
+            else {
+                // ie 9
+                $div
+                    .animate({ height: angle }, {
+                        duration: speed,
+                        step: function (now, fx) {
+                            $circular.css({ '-ms-transform': 'rotate(' + -fx.now + 'deg)' });
+                            $anchors.css({ '-ms-transform': 'rotate(' + fx.now + 'deg)' });
+                        }
+                    })
+            }
+
+            $displayed.removeClass('current');
+            $target.addClass('current');
+
+            $displayedDetail
+                [method]({ opacity: 0 }, speed / 2, function () {
+
+                $displayedDetail
+                    .removeClass('current')
+                    .css('display', 'none');
+
+                $targetDetail
+                    .addClass('current')
+                    .css({
+                        display: 'block',
+                        opacity: 0
+                    })
+                    [method]({ opacity: 1 }, speed / 2, function () {
+                    isAnimating = false;
+                });
+            });
+        }
+
+        function trigger() {
+            var index = $anchors.index($anchors.filter('.current')),
+                target = this.is(settings.next) ? index - 1 : (index + 1) % length;
+
+            $anchors.eq(target).trigger('click');
+        }
+
+        $prev.on('click', trigger.bind($prev)),
+            $next.on('click', trigger.bind($next)),
+            $anchors.on('click', rotate);
+    }
+</script>
+
+</body>
+</html>
